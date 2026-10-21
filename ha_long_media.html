@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HẠ LONG MEDIA - Trang báo của Trường Đại học Hạ Long">
+<title>HẠ LONG MEDIA | Trang báo Trường Đại học Hạ Long</title>
+<style>
+:root{--navy:#082c4c;--blue:#075b91;--sky:#e8f4fa;--gold:#e8b54a;--ink:#172b3a;--muted:#667887;--line:#dbe5eb;--paper:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f7f9;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}button,input{font:inherit}.topline{background:var(--navy);color:#eaf5fc;font-size:12px}.topline .inner{max-width:1200px;margin:auto;padding:7px 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.masthead{background:white;border-bottom:1px solid var(--line)}.masthead-inner{max-width:1200px;margin:auto;padding:24px 20px 20px;display:flex;align-items:center;gap:18px}
+.brand-mark{width:62px;height:62px;flex:none;border:2px solid var(--blue);color:var(--blue);display:grid;place-items:center;border-radius:50%;font-weight:900;font-size:19px;letter-spacing:-1px}
+.brand h1{margin:0;color:var(--navy);font-size:clamp(27px,4vw,42px);line-height:1;font-weight:900;letter-spacing:1.2px}.brand p{margin:8px 0 0;color:#536d7f;font-size:12px;letter-spacing:1.4px;font-weight:700;text-transform:uppercase}
+.searchbox{margin-left:auto;display:flex;border:1px solid #cad8e1;border-radius:4px;overflow:hidden;max-width:320px;width:100%}.searchbox input{border:0;outline:0;padding:10px 12px;width:100%;min-width:0}.searchbox button{border:0;background:var(--blue);color:#fff;padding:0 14px;cursor:pointer}
+.nav{background:var(--blue);color:#fff}.nav-inner{max-width:1200px;margin:auto;padding:0 20px;display:flex;align-items:center;gap:0;overflow-x:auto}.nav a{white-space:nowrap;padding:13px 15px;font-size:13px;font-weight:700;border-bottom:3px solid transparent}.nav a:hover,.nav a.active{background:#064a76;border-bottom-color:var(--gold)}
+main{max-width:1200px;margin:24px auto;padding:0 20px}.section-label{display:flex;align-items:center;gap:10px;text-transform:uppercase;color:var(--navy);font-size:14px;font-weight:900;letter-spacing:.6px;margin:0 0 14px}.section-label:before{content:"";height:20px;width:5px;background:var(--gold);display:block}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:18px}.hero-main{position:relative;min-height:390px;background:linear-gradient(120deg,#07365a,#0b6b9d);color:white;overflow:hidden;display:flex;align-items:end;border-radius:5px}
+.hero-main:before{content:"HẠ LONG";position:absolute;right:-25px;top:15px;font-size:clamp(70px,12vw,150px);font-weight:900;color:#ffffff0d;letter-spacing:-8px}.hero-main:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#041c31 0%,#041c3100 78%)}
+.hero-content{position:relative;z-index:1;padding:30px;max-width:700px}.tag{display:inline-block;background:var(--gold);color:#182f40;padding:4px 9px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.6px;border-radius:2px}.hero-content h2{font-size:clamp(28px,4vw,44px);line-height:1.12;margin:14px 0 12px}.hero-content p{max-width:620px;color:#e3edf4;margin:0 0 17px}.byline{font-size:12px;color:#c4d7e4}
+.hero-side{display:grid;grid-template-rows:1fr 1fr;gap:18px}.side-story{background:#fff;border:1px solid var(--line);border-radius:5px;display:grid;grid-template-columns:112px 1fr;overflow:hidden;min-height:180px}.story-art{display:grid;place-items:center;color:white;font-weight:900;text-align:center;font-size:13px;letter-spacing:1px;padding:10px;background:linear-gradient(145deg,#0d638f,#72bfd4)}.story-art.gold{background:linear-gradient(145deg,#b27623,#f0cd78);color:#263b49}.story-art.navy{background:linear-gradient(145deg,#102f50,#447da2)}.side-copy{padding:14px}.side-copy h3{font-size:17px;line-height:1.3;margin:8px 0}.side-copy p{font-size:12px;color:var(--muted);margin:0}
+.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:28px;margin-top:32px}.article-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.article-card{background:#fff;border:1px solid var(--line);border-radius:5px;overflow:hidden;transition:transform .18s,box-shadow .18s;cursor:pointer}.article-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px #0c355414}.article-art{height:150px;display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:20px;font-size:22px;font-weight:900;letter-spacing:.4px;background:linear-gradient(135deg,#0c5c8d,#77c1d3)}.article-art.art2{background:linear-gradient(135deg,#0b3456,#3879a4)}.article-art.art3{background:linear-gradient(135deg,#a96b20,#f1cf7d);color:#243a4a}.article-art.art4{background:linear-gradient(135deg,#195f63,#83c9b4)}.article-body{padding:17px}.category{color:#0873a8;text-transform:uppercase;font-size:10px;font-weight:900;letter-spacing:.8px}.article-body h3{font-size:19px;line-height:1.3;margin:7px 0 9px;color:var(--navy)}.article-body p{font-size:13px;color:#586b79;margin:0 0 12px}.article-meta{font-size:11px;color:#83929c;display:flex;justify-content:space-between;gap:8px}
+.sidebar-block{background:#fff;border:1px solid var(--line);padding:18px;margin-bottom:18px;border-radius:5px}.sidebar-block h3{margin:0 0 13px;color:var(--navy);font-size:15px;text-transform:uppercase;border-bottom:2px solid var(--gold);padding-bottom:9px}.quick-link{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #edf1f4;font-size:13px;font-weight:700}.quick-link:last-child{border-bottom:0}.number{width:25px;height:25px;flex:none;display:grid;place-items:center;background:var(--sky);color:var(--blue);font-weight:900}
+.newsletter p{font-size:13px;color:var(--muted)}.newsletter input{width:100%;padding:10px;border:1px solid var(--line);border-radius:3px;margin-bottom:8px}.primary-btn{border:0;background:var(--blue);color:#fff;padding:10px 14px;border-radius:3px;font-weight:700;cursor:pointer}.primary-btn:hover{background:var(--navy)}
+.notice{margin:28px 0;background:#e8f4fa;border-left:4px solid var(--blue);padding:15px 18px;font-size:13px;color:#365267}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.section-head .section-label{margin-bottom:14px}.section-head button{border:1px solid var(--line);background:white;padding:6px 10px;color:var(--blue);cursor:pointer;border-radius:3px;font-size:12px}
+.empty{display:none;background:white;border:1px solid var(--line);padding:24px;text-align:center;color:var(--muted);grid-column:1/-1}
+.article-view{display:none;background:white;padding:clamp(22px,5vw,55px);border:1px solid var(--line);border-radius:5px;max-width:900px;margin:0 auto}.article-view .back{border:0;background:var(--sky);color:var(--blue);padding:9px 13px;cursor:pointer;font-weight:700;margin-bottom:24px}.article-view h2{font-size:clamp(28px,4vw,42px);line-height:1.15;color:var(--navy);margin:12px 0}.article-view .lead{font-size:18px;color:#526b7b}.article-view p{font-size:16px;line-height:1.9}.article-view .article-art{height:230px;margin:24px 0;border-radius:4px}
+footer{margin-top:40px;background:var(--navy);color:#e7f1f7}.footer-inner{max-width:1200px;margin:auto;padding:32px 20px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-inner h2{margin:0 0 8px;font-size:25px;letter-spacing:1px}.footer-inner p{margin:5px 0;color:#c5d8e4;font-size:13px}.copyright{border-top:1px solid #ffffff24;text-align:center;padding:12px;color:#aac0d0;font-size:11px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#102f50;color:white;padding:12px 18px;border-radius:4px;display:none;z-index:9;box-shadow:0 5px 20px #0002}
+@media(max-width:850px){.hero-grid,.content-grid{grid-template-columns:1fr}.hero-side{grid-template-columns:1fr 1fr;grid-template-rows:auto}.side-story{grid-template-columns:90px 1fr}.content-grid{gap:20px}.sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.sidebar-block{margin:0}}
+@media(max-width:560px){.masthead-inner{padding:18px 15px;gap:10px;flex-wrap:wrap}.brand-mark{width:48px;height:48px;font-size:15px}.brand h1{font-size:27px}.brand p{font-size:9px;letter-spacing:.6px}.searchbox{order:3;max-width:none;margin:4px 0 0;width:100%}.nav-inner{padding:0 8px}.nav a{padding:12px 10px;font-size:12px}main{padding:0 13px;margin-top:16px}.hero-main{min-height:360px}.hero-content{padding:22px}.hero-side{grid-template-columns:1fr}.side-story{min-height:145px}.article-list{grid-template-columns:1fr}.article-art{height:175px}.sidebar{grid-template-columns:1fr}.topline .inner{padding:7px 13px}.article-view{padding:20px}.article-view .article-art{height:180px}}
+</style>
+</head>
+<body>
+<div class="topline"><div class="inner"><span>TRANG TIN TỨC ĐẠI HỌC HẠ LONG</span><span id="today">TIN TỨC • CẬP NHẬT MỖI NGÀY</span></div></div>
+<header class="masthead"><div class="masthead-inner">
+  <div class="brand-mark" aria-hidden="true">HLM</div>
+  <div class="brand"><h1>HẠ LONG MEDIA</h1><p>Trang báo của Trường Đại học Hạ Long</p></div>
+  <form class="searchbox" id="searchForm" role="search"><input id="searchInput" type="search" placeholder="Tìm kiếm tin tức..." aria-label="Tìm kiếm tin tức"><button type="submit">Tìm</button></form>
+</div></header>
+<nav class="nav" aria-label="Chuyên mục"><div class="nav-inner" id="navLinks">
+<a href="#" class="active" data-category="Tất cả">Trang chủ</a><a href="#" data-category="Tin tức">Tin tức</a><a href="#" data-category="Hoạt động sinh viên">Hoạt động sinh viên</a><a href="#" data-category="Đời sống học đường">Đời sống học đường</a><a href="#" data-category="Văn hóa – Sự kiện">Văn hóa – Sự kiện</a><a href="#" data-category="Góc sinh viên">Góc sinh viên</a>
+</div></nav>
+<main>
+<section id="homeView">
+  <div class="section-label">Tiêu điểm</div>
+  <div class="hero-grid">
+    <article class="hero-main" data-article="2" tabindex="0" role="button" aria-label="Đọc bài Chào tân sinh viên K12">
+      <div class="hero-content"><span class="tag">Văn hóa – Sự kiện</span><h2>Đêm chào tân sinh viên K12: Khởi đầu hành trình thanh xuân</h2><p>Không khí sôi nổi, những màn trình diễn đặc sắc và khoảnh khắc kết nối mở đầu hành trình mới của sinh viên Trường Đại học Hạ Long.</p><div class="byline">Bài: Thùy Liên · 13/10/2026 · Đọc bài viết →</div></div>
+    </article>
+    <div class="hero-side">
+      <article class="side-story" data-article="1" tabindex="0" role="button"><div class="story-art gold">ĐỜI SỐNG<br>HỌC ĐƯỜNG</div><div class="side-copy"><span class="category">Đời sống học đường</span><h3>Khám phá những góc “check-in” tại Trường Đại học Hạ Long</h3><p>Những địa điểm quen thuộc lưu giữ dấu ấn tuổi trẻ.</p></div></article>
+      <article class="side-story" data-article="3" tabindex="0" role="button"><div class="story-art navy">SINH VIÊN<br>HẠ LONG</div><div class="side-copy"><span class="category">Hoạt động sinh viên</span><h3>“Chúng tôi là chiến sĩ” – dấu ấn trong mùa học quân sự</h3><p>Gắn kết tinh thần đồng đội qua những hoạt động ý nghĩa.</p></div></article>
+    </div>
+  </div>
+  <div class="content-grid">
+    <section>
+      <div class="section-head"><h2 class="section-label" id="listTitle">Tin mới nhất</h2><button id="clearFilters" type="button">Hiện tất cả tin</button></div>
+      <div class="article-list" id="articleList"></div><div class="empty" id="emptyState">Không tìm thấy bài viết phù hợp. Hãy thử từ khóa khác.</div>
+      <div class="notice"><strong>HẠ LONG MEDIA</strong> — Không gian thông tin về học tập, hoạt động, văn hóa và đời sống sinh viên Trường Đại học Hạ Long.</div>
+    </section>
+    <aside class="sidebar">
+      <div class="sidebar-block"><h3>Đọc nhiều</h3>
+        <a href="#" class="quick-link" data-article="2"><span class="number">01</span><span>Chào tân sinh viên K12 năm 2026</span></a>
+        <a href="#" class="quick-link" data-article="1"><span class="number">02</span><span>Khám phá những góc check-in trong trường</span></a>
+        <a href="#" class="quick-link" data-article="3"><span class="number">03</span><span>Chúng tôi là chiến sĩ</span></a>
+      </div>
+      <div class="sidebar-block"><h3>Chuyên mục</h3>
+        <a href="#" class="quick-link" data-filter="Tin tức">Tin tức</a>
+        <a href="#" class="quick-link" data-filter="Hoạt động sinh viên">Hoạt động sinh viên</a>
+        <a href="#" class="quick-link" data-filter="Đời sống học đường">Đời sống học đường</a>
+        <a href="#" class="quick-link" data-filter="Văn hóa – Sự kiện">Văn hóa – Sự kiện</a>
+      </div>
+      <div class="sidebar-block newsletter"><h3>Nhận tin mới</h3><p>Đăng ký email để nhận thông báo về bài viết mới từ HẠ LONG MEDIA.</p><form id="subscribeForm"><input id="emailInput" type="email" placeholder="Email của bạn" required aria-label="Email của bạn"><button class="primary-btn" type="submit">Đăng ký</button></form></div>
+    </aside>
+  </div>
+</section>
+<section id="articleView" class="article-view" aria-live="polite"></section>
+</main>
+<footer><div class="footer-inner"><div><h2>HẠ LONG MEDIA</h2><p>TRANG BÁO CỦA TRƯỜNG ĐẠI HỌC HẠ LONG</p><p>Chất lượng · Sáng tạo · Nhân văn</p></div><div><strong>Chuyên mục</strong><p>Tin tức · Hoạt động sinh viên · Đời sống học đường</p><p>Văn hóa – Sự kiện · Góc sinh viên</p></div><div><strong>Thông tin</strong><p>Website mẫu phục vụ học tập và thực hành báo chí.</p><p>Nội dung được xây dựng từ tài liệu PDF người dùng cung cấp.</p></div></div><div class="copyright">© 2026 HẠ LONG MEDIA. Bản mẫu giao diện báo điện tử.</div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const articles = [
+{id:1,category:"Đời sống học đường",title:"Khám phá những góc “check-in” tại Trường Đại học Hạ Long",date:"21/10/2026",author:"Thùy Liên",photo:"Tâm Hoàng",art:"GÓC CHECK-IN",artClass:"art3",lead:"Trường Đại học Hạ Long không chỉ là nơi học tập, nghiên cứu mà còn có những không gian gắn liền với đời sống sinh viên.",paragraphs:[
+"Trường Đại học Hạ Long không chỉ là nơi học tập, nghiên cứu mà còn có những không gian gắn liền với đời sống sinh viên. Từ các khu vực sinh hoạt chung đến không gian học tập và thể thao, mỗi địa điểm đều góp phần tạo nên môi trường học đường năng động, đồng thời lưu giữ những dấu ấn đáng nhớ của tuổi trẻ.",
+"Tòa B là một trong những địa điểm được lựa chọn trong hành trình khám phá khuôn viên Trường Đại học Hạ Long. Gắn liền với nhịp sống học tập thường ngày, khu vực này có thể trở thành nơi lưu giữ những hình ảnh kỷ niệm của sinh viên trong các hoạt động học tập và giao lưu tại trường.",
+"Tòa E là nơi diễn ra các giờ học tin học của sinh viên. Bên cạnh không gian đào tạo, góc cầu thang thơ mộng còn trở thành điểm check-in thu hút giới trẻ, lưu giữ những khoảnh khắc đẹp của tuổi thanh xuân dưới mái trường.",
+"Phòng tự học phục vụ nhu cầu ôn tập, nghiên cứu và trao đổi kiến thức. Với không gian yên tĩnh, nơi đây tạo điều kiện để người học tập trung trau dồi tri thức, phát huy tinh thần tự học và nâng cao hiệu quả học tập.",
+"Sân bóng rổ là điểm đến dành cho sinh viên rèn luyện thể chất, nâng cao kỹ năng và giao lưu đồng đội. Những trận đấu sôi nổi góp phần lan tỏa tinh thần thể thao, sự đoàn kết và năng lượng tuổi trẻ. SOL cũng là điểm dừng chân quen thuộc với thực đơn đồ ăn, thức uống đa dạng và góc check-in ấn tượng bên bạn bè sau giờ học."
+]},
+{id:2,category:"Văn hóa – Sự kiện",title:"Đêm chào tân sinh viên K12: Khởi đầu hành trình thanh xuân",date:"13/10/2026",author:"Thùy Liên",photo:"Sưu tầm",art:"CHÀO TÂN SINH VIÊN K12",artClass:"art2",lead:"Trường Đại học Hạ Long tổ chức chương trình chào tân sinh viên trong không khí sôi nổi, trẻ trung và đầy nhiệt huyết.",paragraphs:[
+"Tối ngày 13/10/2026, Trường Đại học Hạ Long tổ chức chương trình chào tân sinh viên trong không khí sôi nổi, trẻ trung và đầy nhiệt huyết. Sự kiện là dịp để các tân sinh viên hòa mình vào môi trường đại học, giao lưu, kết nối và khởi đầu hành trình thanh xuân với nhiều trải nghiệm đáng nhớ dưới mái trường Đại học Hạ Long.",
+"Chương trình được tổ chức nhằm chào đón những gương mặt mới gia nhập mái nhà chung Đại học Hạ Long, đồng thời tạo cơ hội để các bạn giao lưu, kết nối và hòa nhập với môi trường học tập mới. Không khí trẻ trung, năng động cùng những tiết mục văn nghệ và hoạt động giao lưu góp phần lan tỏa tinh thần đoàn kết, nhiệt huyết và sáng tạo của tuổi trẻ.",
+"Chương trình có sự tham dự của đông đảo cán bộ, giảng viên, sinh viên Trường Đại học Hạ Long cùng đại diện các đơn vị đồng hành. Tại sự kiện, thầy Nguyễn Đức Tiệp – Phó Hiệu trưởng nhà trường đã chia sẻ về chặng đường học tập, rèn luyện và gửi gắm lời động viên tới thế hệ sinh viên mới.",
+"Trong khuôn khổ chương trình, nhà trường trao thưởng cho các thủ khoa đầu vào năm học 2025–2026; Đoàn Thanh niên – Hội Sinh viên khen thưởng các cá nhân, tập thể có thành tích xuất sắc trong công tác Đoàn – Hội và phong trào sinh viên. Hoạt động trao học bổng khuyến học cũng góp phần động viên tinh thần vượt khó, nỗ lực vươn lên trong học tập.",
+"Đêm hội thêm sôi động với các tiết mục văn nghệ từ câu lạc bộ, đội, nhóm và phần giao lưu âm nhạc cùng hai ca sĩ khách mời JayKii, Bevis. Đại nhạc hội DJ khép lại chương trình, để lại nhiều dấu ấn và kỷ niệm đáng nhớ cho các tân sinh viên."
+]},
+{id:3,category:"Hoạt động sinh viên",title:"“Chúng tôi là chiến sĩ” – dấu ấn trong mùa học quân sự",date:"12/07/2026",author:"Hà Thúy",photo:"Sưu tầm",art:"CHÚNG TÔI LÀ CHIẾN SĨ",artClass:"art4",lead:"Chương trình diễn ra tại Hội trường tòa B, Trường Đại học Hạ Long, mang đến không khí sôi nổi cho các tân sinh viên trong thời gian học quân sự.",paragraphs:[
+"Ngày 12/7/2026, chương trình “Chúng tôi là chiến sĩ” diễn ra tại Hội trường tòa B, Trường Đại học Hạ Long, mang đến không khí sôi nổi cho các tân sinh viên trong thời gian học quân sự. Những tiết mục biểu diễn đa dạng cùng sự tham gia nhiệt tình của thầy cô và sinh viên đã góp phần gắn kết tinh thần đồng đội, lưu giữ kỷ niệm đẹp của tuổi trẻ.",
+"Chương trình có sự hiện diện của thầy Trần Trung Vỹ – Hiệu trưởng Trường Đại học Hạ Long, cùng các thầy cô giảng viên nhà trường. Sự đồng hành của lãnh đạo và giảng viên góp phần thắt chặt tình thầy trò, tạo không khí gần gũi, gắn kết và tiếp thêm động lực cho các tân sinh viên trong quá trình học tập, rèn luyện quân sự.",
+"Sân khấu chương trình trở nên phong phú với nhiều hình thức biểu diễn khác nhau, từ những tiết mục múa uyển chuyển, giọng hát trẻ trung đến các màn đồng diễn sôi động. Mỗi phần trình diễn thể hiện sự chuẩn bị nghiêm túc, tinh thần sáng tạo và khả năng thể hiện của giảng viên, sinh viên nhà trường.",
+"Chương trình khép lại trong không khí vui tươi, ấm áp với những khoảnh khắc giao lưu và chụp ảnh lưu niệm giữa thầy cô và sinh viên. Sự kiện góp phần thắt chặt tình đoàn kết, tạo nên dấu ấn đáng nhớ trong hành trình thanh xuân của sinh viên Trường Đại học Hạ Long."
+]},
+{id:4,category:"Tin tức",title:"HẠ LONG MEDIA – Kết nối thông tin, lan tỏa câu chuyện sinh viên",date:"21/10/2026",author:"Ban biên tập",photo:"HẠ LONG MEDIA",art:"TIN TỨC ĐẠI HỌC HẠ LONG",artClass:"",lead:"Không gian báo điện tử dành cho những câu chuyện học tập, hoạt động và đời sống tại Trường Đại học Hạ Long.",paragraphs:[
+"HẠ LONG MEDIA là bản mẫu trang báo điện tử giới thiệu tin tức, hoạt động và đời sống học đường tại Trường Đại học Hạ Long. Website hướng đến cách trình bày thông tin rõ ràng, dễ đọc và thuận tiện trên nhiều thiết bị.",
+"Các bài viết hiện có trong bản mẫu được biên soạn từ tài liệu PDF do người dùng cung cấp. Để đưa website vào sử dụng chính thức, cần bổ sung quy trình biên tập, kiểm chứng thông tin, ảnh có bản quyền phù hợp và thông tin liên hệ được nhà trường phê duyệt."
+]}
+];
+let activeCategory="Tất cả", currentSearch="";
+const list=document.getElementById("articleList"), empty=document.getElementById("emptyState");
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function card(a){return `<article class="article-card" tabindex="0" role="button" data-article="${a.id}" aria-label="Đọc ${escapeHTML(a.title)}"><div class="article-art ${a.artClass}">${escapeHTML(a.art)}</div><div class="article-body"><span class="category">${escapeHTML(a.category)}</span><h3>${escapeHTML(a.title)}</h3><p>${escapeHTML(a.lead)}</p><div class="article-meta"><span>${escapeHTML(a.author)}</span><span>${escapeHTML(a.date)}　→</span></div></div></article>`}
+function renderList(){const found=articles.filter(a=>(activeCategory==="Tất cả"||a.category===activeCategory)&&(`${a.title} ${a.category} ${a.lead} ${a.paragraphs.join(" ")}`).toLocaleLowerCase("vi").includes(currentSearch.toLocaleLowerCase("vi")));list.innerHTML=found.map(card).join("");empty.style.display=found.length?"none":"block";document.getElementById("listTitle").textContent=currentSearch?`Kết quả tìm kiếm (${found.length})`:activeCategory==="Tất cả"?"Tin mới nhất":activeCategory;document.querySelectorAll("#navLinks a").forEach(a=>a.classList.toggle("active",a.dataset.category===activeCategory||(activeCategory==="Tất cả"&&a.dataset.category==="Tất cả")));document.getElementById("homeView").style.display="block";document.getElementById("articleView").style.display="none";}
+function openArticle(id){const a=articles.find(x=>x.id===Number(id));if(!a)return;document.getElementById("homeView").style.display="none";const view=document.getElementById("articleView");view.style.display="block";view.innerHTML=`<button class="back" id="backBtn">← Quay lại trang chủ</button><div class="category">${escapeHTML(a.category)}</div><h2>${escapeHTML(a.title)}</h2><p class="lead">${escapeHTML(a.lead)}</p><div class="byline" style="color:#718593">Bài: ${escapeHTML(a.author)} · Ảnh: ${escapeHTML(a.photo)} · ${escapeHTML(a.date)}</div><div class="article-art ${a.artClass}">${escapeHTML(a.art)}</div>${a.paragraphs.map(p=>`<p>${escapeHTML(p)}</p>`).join("")}<hr style="border:0;border-top:1px solid #dbe5eb;margin:30px 0"><p style="font-size:13px;color:#718593">HẠ LONG MEDIA · Trang báo của Trường Đại học Hạ Long</p>`;document.getElementById("backBtn").addEventListener("click",()=>{renderList();window.scrollTo({top:0,behavior:"smooth"})});window.scrollTo({top:0,behavior:"smooth"});}
+document.addEventListener("click",e=>{const article=e.target.closest("[data-article]");if(article){e.preventDefault();openArticle(article.dataset.article);return}const nav=e.target.closest("[data-category]");if(nav){e.preventDefault();activeCategory=nav.dataset.category;currentSearch="";document.getElementById("searchInput").value="";renderList();window.scrollTo({top:0,behavior:"smooth"});return}const filter=e.target.closest("[data-filter]");if(filter){e.preventDefault();activeCategory=filter.dataset.filter;currentSearch="";document.getElementById("searchInput").value="";renderList();window.scrollTo({top:0,behavior:"smooth"});}});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches('[role="button"][data-article]')){e.preventDefault();openArticle(e.target.dataset.article)}});
+document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();currentSearch=document.getElementById("searchInput").value.trim();activeCategory="Tất cả";renderList();window.scrollTo({top:document.getElementById("listTitle").getBoundingClientRect().top+window.scrollY-80,behavior:"smooth"})});
+document.getElementById("clearFilters").addEventListener("click",()=>{activeCategory="Tất cả";currentSearch="";document.getElementById("searchInput").value="";renderList()});
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.style.display="block";setTimeout(()=>t.style.display="none",3000)}
+document.getElementById("subscribeForm").addEventListener("submit",e=>{e.preventDefault();const email=document.getElementById("emailInput").value;toast("Cảm ơn bạn! Bản mẫu đã ghi nhận thao tác đăng ký cho "+email+".");e.target.reset()});
+document.getElementById("today").textContent="THỨ TƯ, 21/10/2026";
+renderList();
+</script>
+</body>
+</html>
